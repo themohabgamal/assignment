@@ -1,4 +1,5 @@
 import 'package:assignment/home/screens/home_screen.dart';
+import 'package:assignment/home/screens/rooms_and_guests_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,6 +18,11 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           useMaterial3: true,
         ),
-        home: const HomeScreen());
+        routes: {
+          HomeScreen.routeName: (context) => HomeScreen(),
+          RoomsAndGuestsScreen.routeName: (context) =>
+              const RoomsAndGuestsScreen()
+        },
+        initialRoute: HomeScreen.routeName);
   }
 }
